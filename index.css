@@ -72,7 +72,7 @@ body {
 
 .background {
     flex: 1;
-    background-image: url('images/AGRI.jpg'); /* Replace with your image file path */
+    background-image: url('AGRI.jpg'); /* Replace with your image file path */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
