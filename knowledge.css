@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9fafb;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar Styling */
+.topnav {
+    background-color: #4CAF50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.topnav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.topnav .dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    font-size: 16px;
+}
+
+.search-container input[type="text"] {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.search-container button {
+    padding: 8px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+}
+
+/* General Knowledge Section Styling */
+.general-knowledge {
+    padding: 40px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    max-width: 1200px;
+    margin: 30px auto;
+    background: linear-gradient(135deg, #e0f7fa 0%, #f1f9f1 100%); /* Soft gradient background */
+    border: 2px solid #4CAF50; /* Green border for a nature-friendly theme */
+    border-radius: 20px; /* More rounded corners for a modern feel */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* Enhanced shadow for more depth */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+/* Header Styling */
+.general-knowledge h1 {
+    text-align: center;
+    color: #2C6B2F; /* Rich, deep green for the header */
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-weight: 700; /* Bold font for prominence */
+    letter-spacing: 1px; /* Slight spacing for a clean look */
+    text-transform: uppercase; /* Make header text stand out with uppercase */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle text shadow for added emphasis */
+}
+
+/* List Styling */
+.general-knowledge ul {
+    list-style-type: disc; /* Disc bullet points */
+    padding-left: 40px; /* Indentation for list items */
+    color: #333; /* Dark gray text */
+    font-size: 18px; /* Slightly larger font for readability */
+    margin-top: 20px;
+    line-height: 1.6; /* Better line spacing for legibility */
+    font-weight: 400; /* Normal weight for list text */
+}
+
+/* List Item Styling */
+.general-knowledge ul li {
+    margin-bottom: 15px; /* Increased spacing between items */
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect on list items */
+}
+
+.general-knowledge ul li:hover {
+    transform: translateX(10px); /* Subtle animation to move items on hover */
+    color: #4CAF50; /* Change text color to green on hover */
+}
+
+/* Highlighted Text Styling */
+.general-knowledge ul li strong {
+    color: #388E3C; /* Darker green for key terms */
+    font-weight: 600; /* Bold for emphasis */
+}
+
+/* Hover Effect for the Section */
+.general-knowledge:hover {
+    background: linear-gradient(135deg, #b2dfdb 0%, #e8f5e9 100%); /* Lighter gradient background on hover */
+    border-color: #388E3C; /* Darker border on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow effect */
+}
+
+/* Call to Action (CTA) Button Styling */
+.general-knowledge .cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 30px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.general-knowledge .cta-button:hover {
+    background-color: #388E3C; /* Darker green on hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .general-knowledge {
+        padding: 25px;
+        margin: 15px;
+        max-width: 100%; /* Full width on smaller screens */
+    }
+    
+    .general-knowledge h1 {
+        font-size: 28px; /* Smaller header font size on mobile */
+        letter-spacing: 0.5px; /* Reduced letter-spacing for mobile */
+    }
+    
+    .general-knowledge ul li {
+        font-size: 16px; /* Slightly smaller font for list items on mobile */
+    }
+    
+    .general-knowledge .cta-button {
+        padding: 10px 20px; /* Adjust button padding for mobile */
+        font-size: 16px; /* Smaller font for the button on mobile */
+    }
+}

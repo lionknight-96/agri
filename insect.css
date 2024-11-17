@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar Styling */
+.topnav {
+    background-color: #4CAF50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.topnav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.topnav .dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    font-size: 16px;
+}
+
+.search-container input[type="text"] {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.search-container button {
+    padding: 8px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+}
+
+.content-section {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.content-section:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+/* Improved Padding and Layout */
+.content-section .image-item {
+    padding: 25px 30px;
+}
+
+.content-section .image-item + .image-item {
+    margin-top: 15px;
+}
+
+.image-item:last-child {
+    border-bottom: none;
+}
+
+/* Text Styling */
+.image-text h3 {
+    font-size: 1.6em;
+    color: #4A90E2;
+    margin-bottom: 10px;
+}
+
+.image-text p,
+.image-text ul {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+.image-text ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.image-text ul li {
+    margin-bottom: 8px;
+}
+
+/* Smooth Hover Effects */
+.image-text h3,
+.image-text p,
+.image-text ul li {
+    transition: color 0.3s ease;
+}
+
+.image-text h3:hover {
+    color: #357ABD;
+}
+
+.image-text ul li:hover {
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .image-item {
+        padding: 20px;
+    }
+
+    .image-text h3 {
+        font-size: 1.4em;
+    }
+
+    .image-text p,
+    .image-text ul li {
+        font-size: 0.95em;
+    }
+}

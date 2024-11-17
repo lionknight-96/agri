@@ -1,0 +1,145 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar styling as already defined */
+.topnav {
+    background-color: #4CAF50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.topnav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.topnav .dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    font-size: 16px;
+}
+
+.search-container input[type="text"] {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.search-container button {
+    padding: 8px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+}
+
+/* Content Section Styling */
+.content-section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 100px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Content Item Card Styling */
+.content-item {
+    display: flex; /* Enable flex layout */
+    align-items: stretch; /* Stretch items to fill the container height */
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+.content-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Styling */
+.content-image {
+    width: 50%; /* Use half the width of the container */
+    height: 100%; /* Fill the height of the container */
+    object-fit: cover; /* Cover the container, cropping as needed */
+    transition: transform 0.3s ease;
+}
+
+.content-item:hover .content-image {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Text Styling */
+.content-text {
+    padding: 20px;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    width: 50%; /* Adjust width to fit side by side */
+}
+
+/* Headings Styling */
+h1, h2, .content-item h3 {
+    font-family: 'Playfair Display', serif;
+    color: #4CAF50;
+}
+
+h2, .content-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* Adjust layout on smaller screens */
+@media (max-width: 768px) {
+    .content-section {
+        padding: 20px;
+    }
+    .content-item {
+        flex-direction: column; /* Stack on smaller screens */
+        align-items: stretch; /* Align items to stretch */
+    }
+    .content-image {
+        width: 100%; /* Full width for smaller screens */
+        height: auto; /* Auto height to maintain aspect ratio */
+    }
+    .content-text {
+        width: 100%; /* Full width for smaller screens */
+    }
+}

@@ -1,0 +1,212 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar Styling */
+.topnav {
+    background-color: #4CAF50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.topnav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.topnav .dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    font-size: 16px;
+}
+
+.search-container input[type="text"] {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.search-container button {
+    padding: 8px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+}
+
+/* Main Content */
+.main-content {
+    padding: 30px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.intro {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Image Grid */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.image-grid img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Content Sections */
+.content-sections {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    font-size: 22px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Conclusion */
+.conclusion {
+    background-color: #e8f5e9;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #4CAF50;
+}
+
+.conclusion h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.conclusion p {
+    font-size: 16px;
+    color: #555;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive, adjusts columns based on screen size */
+    gap: 20px; /* Increased spacing between images */
+    margin: 30px auto;
+    max-width: 1200px; /* Limits the width of the grid on larger screens */
+    padding: 0 20px;
+}
+
+.image-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for a floating effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fill the card without distortion */
+    transition: transform 0.4s ease;
+}
+
+.image-card:hover {
+    transform: translateY(-5px); /* Slight upward movement on hover */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.image-card:hover img {
+    transform: scale(1.1); /* Slightly enlarges image on hover */
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 1rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-card:hover .image-caption {
+    opacity: 1; /* Fade-in effect for caption */
+}
+
+.footer {
+    background-color: #333; /* Darker background for contrast */
+    color: #f1f1f1; /* Light text for readability */
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 14px;
+    border-top: 4px solid #4CAF50; /* Accent border on top */
+}
+
+/* Responsive Footer Styling */
+@media (max-width: 600px) {
+    .footer {
+        font-size: 12px;
+    }
+
+    .footer-icons a {
+        font-size: 16px;
+        margin: 0 8px;
+    }
+}

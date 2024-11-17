@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Navbar Styling */
+.topnav {
+    background-color: #4CAF50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.topnav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.topnav .dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    font-size: 16px;
+}
+
+.search-container input[type="text"] {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.search-container button {
+    padding: 8px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+}
+/* Content Section */
+.content-section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.content-section h1 {
+    font-size: 2.5em;           /* Increase the font size */
+    color: #4CAF50;             /* Change the text color */
+    text-align: center;         /* Center the text */
+    margin: 20px 0;            /* Add margin above and below the heading */
+    padding: 10px;              /* Add padding inside the heading */
+    font-weight: bold;          /* Make the text bold */
+    text-transform: uppercase;   /* Make the text uppercase */
+    letter-spacing: 1px;       /* Increase the space between letters */
+    transition: color 0.3s;    /* Add transition effect for color change */
+}
+
+.content-section h1:hover {
+    color: #2e7d32;             /* Change color on hover */
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Slightly larger min width for images */
+    gap: 25px; /* Increased gap for better spacing */
+    margin-top: 20px;
+}
+
+.image-item {
+    background-color: #ffffff; /* White background for contrast */
+    border-radius: 12px; /* Slightly more rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Position relative for absolute positioning of text */
+}
+
+.image-item:hover {
+    transform: translateY(-6px); /* Increased lift effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Deeper shadow on hover */
+}
+
+.image-item img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Transition for image */
+}
+
+.image-item:hover img {
+    transform: scale(1.1); /* Slightly larger image on hover */
+}
+
+.text-box {
+    padding: 20px; /* Increased padding for spacious feel */
+    color: #333;
+    text-align: center;
+    font-size: 16px; /* Increased font size for readability */
+    line-height: 1.6; /* Improved line height for better readability */
+    background-color: #f4f4f4; /* Light gray background for contrast */
+    border-top: 2px solid #4CAF50; /* Green top border for accent */
+    position: absolute; /* Position text box absolutely */
+    bottom: 0; /* Align to bottom of image */
+    left: 0;
+    right: 0; /* Stretch across image */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.image-item:hover .text-box {
+    background-color: rgba(76, 175, 80, 0.8); /* Darker background on hover for emphasis */
+    color: #ffffff; /* Change text color on hover for contrast */
+}
